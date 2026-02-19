@@ -88,11 +88,11 @@ const Pricing = () => {
         </div>
 
         {/* Plans Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-3xl p-8 transition-all duration-300 hover-lift ${
+              className={`relative rounded-3xl p-6 sm:p-8 transition-all duration-300 hover-lift ${
                 plan.highlighted
                   ? "bg-gradient-to-b from-primary/20 to-background border-2 border-primary"
                   : "bg-background border border-border"
@@ -110,15 +110,15 @@ const Pricing = () => {
 
               {/* Plan Header */}
               <div className="text-center mb-8">
-                <h3 className="font-display text-3xl mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm">{plan.description}</p>
+                <h3 className="font-display text-2xl sm:text-3xl mb-2">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">{plan.description}</p>
               </div>
 
               {/* Price */}
               <div className="text-center mb-8">
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-2xl text-muted-foreground">$</span>
-                  <span className="font-display text-6xl">
+                  <span className="text-xl sm:text-2xl text-muted-foreground">$</span>
+                  <span className="font-display text-4xl sm:text-6xl">
                     {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                   </span>
                 </div>
@@ -128,13 +128,13 @@ const Pricing = () => {
               </div>
 
               {/* Features */}
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 sm:space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full gradient-bg flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-primary-foreground" />
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary-foreground" />
                     </div>
-                    <span className="text-muted-foreground">{feature}</span>
+                    <span className="text-muted-foreground text-sm sm:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>

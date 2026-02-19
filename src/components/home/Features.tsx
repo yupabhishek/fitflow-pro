@@ -44,17 +44,17 @@ const Features = () => {
           description="We're not just a gym — we're a community dedicated to helping you achieve extraordinary results."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
+              className="group p-6 sm:p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
             >
-              <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl gradient-bg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="font-display text-xl sm:text-2xl mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
             </div>
           ))}
         </div>

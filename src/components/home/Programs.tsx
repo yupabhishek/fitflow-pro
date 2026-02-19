@@ -52,17 +52,19 @@ const Programs = () => {
           description="From beginners to elite athletes, we have programs designed to help you reach your goals."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-6 lg:gap-8">
           {programs.map((program, index) => (
             <Link
               key={index}
               to="/programs"
-              className="group relative overflow-hidden rounded-2xl aspect-[4/5] hover-lift"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/5] hover-lift w-full"
             >
               {/* Image */}
               <img
                 src={program.image}
                 alt={program.title}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
@@ -71,13 +73,13 @@ const Programs = () => {
               
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary mb-2">
                   {program.sessions}
                 </span>
-                <h3 className="font-display text-3xl mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-2xl sm:text-3xl mb-2 group-hover:text-primary transition-colors">
                   {program.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                <p className="text-muted-foreground text-sm sm:text-base mb-4 line-clamp-2">
                   {program.description}
                 </p>
                 <div className="flex items-center text-primary font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">

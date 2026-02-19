@@ -70,6 +70,8 @@ const Testimonials = () => {
                   <img
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -85,7 +87,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-6">
+                <blockquote className="text-lg md:text-xl lg:text-2xl text-foreground leading-relaxed mb-6">
                   "{testimonials[currentIndex].text}"
                 </blockquote>
 
