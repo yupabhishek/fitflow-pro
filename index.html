@@ -3,24 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Primary SEO -->
+    <title>Fit Flow Pro Gym | Strength, Fitness & Personal Training</title>
+    <meta
+      name="description"
+      content="Fit Flow Pro Gym offers modern equipment, expert trainers, and personalized fitness programs. Join today and transform your body."
+    />
+    <meta
+      name="keywords"
+      content="gym, fitness, personal training, weight loss, strength training, bodybuilding, fitness center"
+    />
+    <meta name="author" content="Fit Flow Pro Gym" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fit Flow Pro Gym | Transform Your Fitness" />
+    <meta
+      property="og:description"
+      content="Modern gym, expert trainers, and result-driven fitness programs. Start your transformation today."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="/logo.jpg" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Fit Flow Pro Gym" />
+    <meta
+      name="twitter:description"
+      content="Join Fit Flow Pro Gym for strength, fitness, and professional coaching."
+    />
+    <meta name="twitter:image" content="/logo.png" />
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="Delhi" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HealthClub",
+        "name": "Fit Flow Pro Gym",
+        "image": "https://fitflowpro.com/og-image.jpg",
+        "url": "https://fitflowpro.com",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Your Address",
+          "addressLocality": "Delhi",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/fitflowpro",
+          "https://www.facebook.com/fitflowpro"
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- WhatsApp Lead Button -->
+    <script>
+      window.onload = function () {
+        const btn = document.createElement("a");
+        btn.href = "https://wa.me/91XXXXXXXXXX";
+        btn.innerText = "Chat on WhatsApp";
+        btn.style.position = "fixed";
+        btn.style.bottom = "20px";
+        btn.style.right = "20px";
+        btn.style.background = "#25D366";
+        btn.style.color = "#fff";
+        btn.style.padding = "12px 18px";
+        btn.style.borderRadius = "30px";
+        btn.style.fontWeight = "bold";
+        btn.style.textDecoration = "none";
+        btn.style.zIndex = "9999";
+        document.body.appendChild(btn);
+      };
+    </script>
   </body>
 </html>
