@@ -11,7 +11,7 @@ const Location = () => {
           description="Located in the heart of the city with easy access and ample parking."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Map */}
           <div className="relative aspect-video sm:aspect-[4/3] lg:aspect-auto lg:h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[400px] rounded-2xl overflow-hidden">
             <iframe

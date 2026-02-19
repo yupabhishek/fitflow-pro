@@ -4,7 +4,8 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[75vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* note: min height reduced on small devices to keep CTA above the fold */}
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -17,8 +18,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20 sm:pt-24">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-4 relative z-10 pt-16 sm:pt-20">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -26,25 +27,25 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none mb-6 animate-fade-up stagger-1">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 animate-fade-up stagger-1 break-words">
             FORGE YOUR
             <span className="block gradient-text">STRONGEST SELF</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl animate-fade-up stagger-2">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-full mx-auto animate-fade-up stagger-2">
             Premium equipment. Expert trainers. Unmatched community. Transform your body and unleash your potential.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up stagger-3">
-            <Button asChild size="lg" className="gradient-bg hover:opacity-90 text-lg px-8 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up stagger-3 items-center justify-center">
+              <Button asChild size="lg" className="gradient-bg hover:opacity-90 text-lg px-6 py-4 w-full sm:w-auto">
               <Link to="/membership">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 w-full sm:w-auto border-primary/50 hover:bg-primary/10">
+            <Button asChild variant="outline" size="lg" className="text-lg px-6 py-4 w-full sm:w-auto border-primary/50 hover:bg-primary/10">
               <Link to="/programs">
                 <Play className="mr-2 w-5 h-5" />
                 Watch Our Story
@@ -53,7 +54,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12 mt-16 animate-fade-up stagger-4">
+          <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12 mt-12 md:mt-16 animate-fade-up stagger-4">
             {[
               { value: "10K+", label: "Active Members" },
               { value: "50+", label: "Expert Trainers" },

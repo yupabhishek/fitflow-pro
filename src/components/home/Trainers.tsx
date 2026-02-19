@@ -53,7 +53,7 @@ const Trainers = () => {
                   alt={trainer.name}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
@@ -61,7 +61,7 @@ const Trainers = () => {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-display text-2xl mb-1">{trainer.name}</h3>
+                <h3 className="font-display text-xl sm:text-2xl mb-1 break-words">{trainer.name}</h3>
                 <p className="text-primary font-medium text-sm mb-3">{trainer.role}</p>
                 
                 {/* Specialties */}
@@ -94,7 +94,7 @@ const Trainers = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
+          <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto">
             <Link to="/trainers">
               View All Trainers
               <ArrowRight className="ml-2 w-5 h-5" />

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center lg:bg-fixed"
@@ -19,22 +19,22 @@ const CTA = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 break-words">
             READY TO
             <span className="block gradient-text">TRANSFORM?</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-full mx-auto">
             Join thousands who have already started their fitness journey. Your first week is completely free — no commitment required.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="gradient-bg hover:opacity-90 text-lg px-8 w-full sm:w-auto">
+            <Button asChild size="lg" className="gradient-bg hover:opacity-90 text-lg px-6 py-4 w-full sm:w-auto">
               <Link to="/membership">
                 Start Your Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 w-full sm:w-auto border-primary/50 hover:bg-primary/10">
+            <Button asChild variant="outline" size="lg" className="text-lg px-6 py-4 w-full sm:w-auto border-primary/50 hover:bg-primary/10">
               <a href="tel:+1234567890">
                 <Phone className="mr-2 w-5 h-5" />
                 (123) 456-7890

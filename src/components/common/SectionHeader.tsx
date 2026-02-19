@@ -21,7 +21,7 @@ const SectionHeader = ({
         </span>
       )}
       <h2
-        className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide mb-4 ${
+        className={`font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl tracking-wide mb-4 ${
           light ? "text-foreground" : ""
         }`}
       >
@@ -29,7 +29,7 @@ const SectionHeader = ({
       </h2>
       {description && (
         <p
-          className={`text-base sm:text-lg max-w-2xl ${
+          className={`text-sm sm:text-base max-w-2xl ${
             align === "center" ? "mx-auto" : ""
           } ${light ? "text-muted-foreground" : "text-muted-foreground"}`}
         >

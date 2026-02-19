@@ -65,18 +65,18 @@ const Programs = () => {
                 alt={program.title}
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               />
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
               
               {/* Content */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary mb-2">
+              <div className="absolute inset-0 p-6 flex flex-col justify-end text-center sm:text-left">
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary mb-2 break-words">
                   {program.sessions}
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-xl sm:text-2xl mb-2 group-hover:text-primary transition-colors break-words">
                   {program.title}
                 </h3>
                 <p className="text-muted-foreground text-sm sm:text-base mb-4 line-clamp-2">
@@ -92,7 +92,7 @@ const Programs = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
+          <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto">
             <Link to="/programs">
               View All Programs
               <ArrowRight className="ml-2 w-5 h-5" />

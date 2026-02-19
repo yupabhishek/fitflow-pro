@@ -9,7 +9,8 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    // wrap everything to block potential overflow from children
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

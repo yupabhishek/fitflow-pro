@@ -48,12 +48,12 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 sm:p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
+              className="group p-6 sm:p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift text-center sm:text-left"
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl gradient-bg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-xl sm:text-2xl mb-3">{feature.title}</h3>
+              <h3 className="font-display text-xl sm:text-2xl mb-3 break-words">{feature.title}</h3>
               <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
             </div>
           ))}
